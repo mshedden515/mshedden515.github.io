@@ -1,5 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre&family=Inria+Sans&display=swap");
+
+/* Reglas para usar las familias:
+
+    font-family: 'Gemunu Libre', sans-serif;
+
+    font-family: 'Inria Sans', sans-serif;
+
+*/
+
 @media only screen and (max-width: 480px) {
   #searchitem{
     margin-top: 1rem;
   }
+}
+
+h3 {
+  font-size: 20px;
+  font-family: 'Gemunu Libre', sans-serif;
+}
+
+body{
+  font-family: 'Inria Sans', sans-serif;
 }
