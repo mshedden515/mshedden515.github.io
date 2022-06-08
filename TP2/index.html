@@ -15,113 +15,225 @@
     <title>Tpe Interfaces</title>
   </head>
   <body>
-
-    <!--Navbar start-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand">
-          <img src="./img/logo.png" height="45" width="45">
-        </a>
-        <!--Navbar items-->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item" id="searchitem">
+    <content>
+      <!--Navbar start-->
+      <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+          <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+            <img src="./img/logo.png" height="45" width="45">
+          </a>
+          <!--Navbar items-->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item" id="searchitem">
+                  <a class="nav-link active" href="search.html" tabindex="-1" aria-current="page">
+                    <img src="./img/lupa.png" class="d-lg-none">Buscar
+                  </a>
+              </li>
+              <!--TODO: Ajustar tamaños de clases de titulos.-->
+              <li class="nav-item d-lg-none">
+                <h3>CATEGORIAS</h3>
+              </li>
+              
+              <li class="nav-item">
                 <a class="nav-link active" href="#" tabindex="-1" aria-current="page">
-                  <img src="./img/lupa.png" class="d-lg-none">Buscar
+                  <img src="./img/sword.png" class="d-lg-none">Accion
                 </a>
-            </li>
-            <!--TODO: Ajustar tamaños de clases de titulos.-->
-            <li class="nav-item d-lg-none">
-              <h3>CATEGORIAS</h3>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link active" href="#" tabindex="-1" aria-current="page">
-                <img src="./img/lupa.png" class="d-lg-none">Accion
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#" tabindex="-1" aria-current="page">
-                <img src="./img/lupa.png" class="d-lg-none">Tiros
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#" tabindex="-1" aria-current="page">
-                <img src="./img/lupa.png" class="d-lg-none">Puzzle
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#" tabindex="-1" aria-current="page">
-                <img src="./img/lupa.png" class="d-lg-none">Estrategia
-              </a>
-            </li>
-          </ul>
-          <!--
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>-->
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#" tabindex="-1" aria-current="page">
+                  <img src="./img/gun.png" class="d-lg-none">Tiros
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#" tabindex="-1" aria-current="page">
+                  <img src="./img/puzzle.png" class="d-lg-none">Puzzle
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#" tabindex="-1" aria-current="page">
+                  <img src="./img/strategy.png" class="d-lg-none">Estrategia
+                </a>
+              </li>
+            </ul>
+            <ul class="navbar-nav">
+              <li class="nav-item d-lg-none">
+                <h3>PERFIL</h3>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#" tabindex="-1" aria-current="page">
+                  <img src="./img/avatar.png" class="d-lg-none"> Iniciar sesion
+                </a>
+              </li>
+            </ul>
+            <!--
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>-->
+          </div>
         </div>
-      </div>
-    </nav>
-    <!--Navbar end-->
+      </nav>
+      <!--Navbar end-->
 
-    <!--Content start-->
-    <div class="card bg-dark text-white">
-      <img src="./img/mario2.jpg" class="card-img" alt="...">
-      <div class="card-img-overlay">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text">Last updated 3 mins ago</p>
-      </div>
-    </div>
-    <div class="card sm-dark text-white">
-      <img src="./img/cocacola.webp" class="card-img" alt="...">
-    </div>
-    <div class="row row-cols-1 row-cols-md-2 g-4">
-      <div class="col">
-        <div class="card">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
+      <!--Juego destacado start-->
+      <div class="card text-white mt-2 mb-2 m-1">
+        <img src="./img/mario2.jpg" class="card-img" alt="...">
+        <div class="card-img-overlay gradient">
+          <h1 class="card-title" style="color: #FFDD6B; font-weight: bold">DESTACADO</h1>
+          <a href="#" class="stretched-link"></a>
+        </div>
+        <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
+          <h4 class="card-text mt-auto">Super Mario Bros</h4>
         </div>
       </div>
-      <div class="col">
-        <div class="card">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--Content end-->
+      <!--Juego destacado end-->
 
+      <div class="ad position-relative mt-2 mb-2 m-1">
+        <img src="./img/cocacola.webp">
+        <a href="#" class="stretched-link"></a>
+      </div>
+      
+      <!--Juegos populares y nuevos start-->
+      <div class="row">
+        <div class="col d-flex justify-content-center mt-2 mb-2 m-1 pr-0">
+          <div class="card text-white">
+            <img src="./img/doom.jpg" class="card-img" alt="...">
+            <div class="card-img-overlay gradient">
+              <h2 class="card-title" style="color: #FFDD6B; font-weight: bold">POPULAR</h2>
+              <a href="#" class="stretched-link"></a>
+            </div>
+            <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
+              <h4 class="card-text mt-auto">Doom</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col d-flex justify-content-center mt-2 mb-2 m-1 pl-0">
+          <div class="card text-white"> 
+            <img src="./img/sonic.jpg" class="card-img" alt="...">
+            <div class="card-img-overlay gradient">
+              <h2 class="card-title" style="color: #FFDD6B; font-weight: bold">NUEVO</h2>
+              <a href="#" class="stretched-link"></a>
+            </div>
+            <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
+              <h4 class="card-text mt-auto">Sonic</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Juegos populares y nuevos end-->
+      
+      <!--resto de juegos-->
+      <div class="row">
+        <div class="col d-flex justify-content-center mt-2 mb-2 m-1">
+          <div class="card text-white">
+            <img src="./img/4 en fila.jpg" class="card-img card-img-small" alt="...">
+            <div class="card-img-overlay gradient">
+              <a href="#" class="stretched-link"></a>
+            </div>
+            <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
+              <p class="card-text mt-auto">4 en fila</p>
+            </div>
+          </div>
+        </div>
+        <div class="col d-flex justify-content-center mt-2 mb-2 m-1">
+          <div class="card text-white"> 
+            <img src="./img/minecraft.jpg" class="card-img card-img-small" alt="...">
+            <div class="card-img-overlay gradient">
+              <a href="#" class="stretched-link"></a>
+            </div>
+            <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
+              <p class="card-text mt-auto">Minecraft</p>
+            </div>
+          </div>
+        </div>
+        <div class="col d-flex justify-content-center mt-2 mb-2 m-1">
+          <div class="card text-white"> 
+            <img src="./img/guilty gear.png" class="card-img card-img-small" alt="...">
+            <div class="card-img-overlay gradient">
+              <a href="#" class="stretched-link"></a>
+            </div>
+            <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
+              <p class="card-text mt-auto">Guilty Gear</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col d-flex justify-content-center mt-2 mb-2 m-1">
+          <div class="card text-white">
+            <img src="./img/mortal kombat.jpeg" class="card-img card-img-small" alt="...">
+            <div class="card-img-overlay gradient">
+              <a href="#" class="stretched-link"></a>
+            </div>
+            <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
+              <p class="card-text mt-auto">Mortal Kombat</p>
+            </div>
+          </div>
+        </div>
+        <div class="col d-flex justify-content-center mt-2 mb-2 m-1">
+          <div class="card text-white"> 
+            <img src="./img/counter strike.jpg" class="card-img card-img-small" alt="...">
+            <div class="card-img-overlay gradient">
+              <a href="#" class="stretched-link"></a>
+            </div>
+            <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
+              <p class="card-text mt-auto">Counter Strike</p>
+            </div>
+          </div>
+        </div>
+        <div class="col d-flex justify-content-center mt-2 mb-2 m-1">
+          <div class="card text-white"> 
+            <img src="./img/Deltarune.png" class="card-img card-img-small" alt="...">
+            <div class="card-img-overlay gradient">
+              <a href="#" class="stretched-link"></a>
+            </div>
+            <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
+              <p class="card-text mt-auto">Deltarune</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col d-flex justify-content-center mt-2 mb-2 m-1">
+          <div class="card text-white">
+            <img src="./img/battlefront 2.jpg" class="card-img card-img-small" alt="...">
+            <div class="card-img-overlay gradient">
+              <a href="#" class="stretched-link"></a>
+            </div>
+            <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
+              <p class="card-text mt-auto">Battlefront 2</p>
+            </div>
+          </div>
+        </div>
+        <div class="col d-flex justify-content-center mt-2 mb-2 m-1">
+          <div class="card text-white"> 
+            <img src="./img/street fighter.jpg" class="card-img card-img-small" alt="...">
+            <div class="card-img-overlay gradient">
+              <a href="#" class="stretched-link"></a>
+            </div>
+            <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
+              <p class="card-text mt-auto">Street Fighter</p>
+            </div>
+          </div>
+        </div>
+        <div class="col d-flex justify-content-center mt-2 mb-2 m-1">
+          <div class="card text-white"> 
+            <img src="./img/hollow knight.jpg" class="card-img card-img-small" alt="...">
+            <div class="card-img-overlay gradient">
+              <a href="#" class="stretched-link"></a>
+            </div>
+            <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
+              <p class="card-text mt-auto">Hollow Knight</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </content>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="/script.js"></script>    
+    <script src="./script.js"></script>    
   </body>
 </html>
