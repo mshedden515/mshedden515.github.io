@@ -1,13 +1,5 @@
-(function() {
+'use strict';
 
-  'use strict';
-
-  function fakeLoading(){
-      
-  }
-
-  document.getElementById('searchgames').addEventListener(onclick, function(){
-  document.getElementById('searchresults').classList.remove('d-none');
-  })
-
-})();
+document.getElementById('searchgames').addEventListener("click", function(){
+  document.getElementById("searchresults").classList.remove("d-none");
+});
