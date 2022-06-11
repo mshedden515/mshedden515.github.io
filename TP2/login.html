@@ -24,12 +24,16 @@
               class="img-fluid" alt="Phone image">
           </div-->
           <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-            <img src="/img/boton facebook.png" class="img-fluid" alt="Phone image" 
-                href="https://www.facebook.com/" role="button">
+            <div class="col-md-7 align-items-center justify-content-center">
+              <h2 class="ingresar">ingresar</h2>
+            </div>
+            <img src="/img/boton facebook.png" class="img-fluid mb-4" alt="Phone image" 
+                href="https://www.facebook.com/login" role="button">
             </img>
+            <h2 class="ingresar">O ingresa con tu cuenta</h2>
             <form>
               <!-- Email input -->
-              <div class="form-outline1 form-outline mb-4">
+              <div class="form-outline1 form-outline mb-2">
                 <label class="form-label" for="form1Example13">Email address</label>
                 <input type="email" id="form1Example13" class="form-control form-control-lg" />
               </div>
@@ -44,16 +48,21 @@
                 <!-- Checkbox -->
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
-                  <label class="form-check-label" for="form1Example3"> Remember me </label>
+                  <label class="form-check-label ingresar" for="form1Example3"> Recuerdame </label>
                 </div>
-                <a href="#!">Forgot password?</a>
+                <a class="ingresar" href="www.facebook.com/login">Olvidaste la clave?</a>
               </div>
     
               <!-- Submit button -->
               <div class="d-flex justify-content-around align-items-center mb-4">
-                <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">ingrese</button>
               </div>
-              
+              <h2 class="ingresar"> No tenes cuenta? </h2>
+              <div class="d-flex justify-content-around align-items-center mb-4">
+                <a href="register.html">
+                  <button type="submit" class="btn btn-primary btn-lg btn-block" href="">registrese</button>
+              </a>
+              </div>
             </form>
           </div>
         </div>
