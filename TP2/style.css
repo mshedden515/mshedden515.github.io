@@ -20,7 +20,7 @@
   }
 }
 
-h1{
+h1, figcaption{
   font-size: 35px;
   font-family: 'Gemunu Libre', sans-serif;
 }
@@ -34,7 +34,7 @@ h2{
   color: #eee;
   text-align: center;
 }
-h3 {
+h3{
   font-size: 20px;
   font-family: 'Gemunu Libre', sans-serif;
 }
@@ -141,4 +141,41 @@ body{
 
 .btnr1:hover::before{
   width: 100%;
+}
+.game-preview{
+  background:url('./img/street_fighter.jpg') rgba(196, 196, 196, 0.685); 
+  background-blend-mode:hue;
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+  height: 400px; 
+}
+
+.game-play {
+  background-color: #022140;
+  background-image: url('./img/streetfightergif.gif');
+  height: 400px; 
+  background-size:contain;
+  background-repeat: no-repeat; 
+  background-position: center; 
+}
+
+.playprompt{
+  filter: drop-shadow(0 3px 8px rgb(0, 0, 0));
+  transition: 0.3s;
+}
+
+.playprompt:hover{
+  filter: drop-shadow(0 10px 16px rgb(255, 220, 107));
+}
+
+
+.rotating{
+  animation: rotate 2s infinite;
+  animation-timing-function:linear
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
