@@ -103,15 +103,42 @@ body{
   color: #FFFFF0;
 }
 
-.divider:after,
-.divider:before {
-content: "";
-flex: 1;
-height: 1px;
-background: #eee;
+.btnr{
+  background-color: #0A417A;
+  color: #FFFFF0;
+  position: relative;
+  display: block;
+  color: white;
+  font-size: 20px;
+  font-family: "Gemunu Libre", sans-serif;
+  text-decoration: none;
+  margin: 20px 0;
+  border: 2px solid #f7f7f7;
+  padding: 12px 20px;
+  overflow: hidden;
+  transition: 2s all ease;
 }
 
 .form-outline1{
   padding-top: 5%;
 }
 
+.btnr::before{
+  background-color: #eb1e1e;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: -1;
+  transition: all 0.6s ease;
+}
+
+.btnr1::before{
+  width: 0%;
+  height: 100%;
+}
+
+.btnr1:hover::before{
+  width: 100%;
+}
