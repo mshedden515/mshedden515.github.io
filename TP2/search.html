@@ -38,22 +38,22 @@
             </li>
             
             <li class="nav-item">
-              <a class="nav-link active" href="#" tabindex="-1" aria-current="page">
+              <a class="nav-link active" href="search.html" tabindex="-1" aria-current="page">
                 <img src="./img/sword.png" class="d-lg-none">Accion
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#" tabindex="-1" aria-current="page">
+              <a class="nav-link active" href="search.html" tabindex="-1" aria-current="page">
                 <img src="./img/gun.png" class="d-lg-none">Tiros
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#" tabindex="-1" aria-current="page">
+              <a class="nav-link active" href="search.html" tabindex="-1" aria-current="page">
                 <img src="./img/puzzle.png" class="d-lg-none">Puzzle
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#" tabindex="-1" aria-current="page">
+              <a class="nav-link active" href="search.html" tabindex="-1" aria-current="page">
                 <img src="./img/strategy.png" class="d-lg-none">Estrategia
               </a>
             </li>
@@ -63,9 +63,10 @@
               <h3>PERFIL</h3>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#" tabindex="-1" aria-current="page">
-                <img src="./img/avatar.png" class="d-lg-none"> Iniciar sesion
-              </a>
+              <div class="col d-flex justify-content-center">
+                <a class="nav-link active" href="login.html" tabindex="-1" aria-current="page"> Iniciar sesion </a>
+                <img src="./img/avatar.png">
+            </div>
             </li>
           </ul>
           <!--
@@ -84,11 +85,10 @@
           <h3 style="color: #FFFFF0;" class="m-1">Ordenar por:</h3>
         </label>
 
-        <select name="sort" id="sort" class="m-1">
-          <option value="volvo">Volvo</option>
-          <option value="saab">Saab</option>
-          <option value="mercedes">Mercedes</option>
-          <option value="audi">Audi</option>
+        <select name="sort" id="sort" class="m-1 form-select w-auto">
+          <option value="volvo">Nombre</option>
+          <option value="saab">Genero</option>
+          <option value="mercedes">Popular</option>
         </select> 
       </div>
       <div class="input-group mb-3 m-1">
@@ -97,12 +97,14 @@
           <button class="btn" type="button" id="searchgames">Buscar</button>
         </div>
       </div>
-
-      <div class="d-none" id="searchresults">
+      <div class="d-flex justify-content-center">
+        <img src="./img/loading.png" class="w-25 h-25 rotating d-none" id="loadingiconsearch">
+      </div>
+      <article class="d-none" id="searchresults">
         <div class="row">
           <div class="col d-flex justify-content-center mt-2 mb-2 ms-1 me-0 pe-0">
             <div class="card text-white">
-              <img src="./img/mortal kombat.jpeg" class="card-img card-img-small" alt="...">
+              <img src="./img/mortal_kombat.jpeg" class="card-img card-img-small" alt="...">
               <div class="card-img-overlay gradient">
                 <a href="#" class="stretched-link"></a>
               </div>
@@ -113,23 +115,23 @@
           </div>
           <div class="col d-flex justify-content-center mt-2 mb-2 ms-1 me-0 pe-0 ps-0 pe-0">
             <div class="card text-white"> 
-              <img src="./img/counter strike.jpg" class="card-img card-img-small" alt="...">
+              <img src="./img/street_fighter.jpg" class="card-img card-img-small" alt="...">
               <div class="card-img-overlay gradient">
-                <a href="#" class="stretched-link"></a>
+                <a href="game.html" class="stretched-link"></a>
               </div>
               <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
-                <p class="card-text mt-auto">Counter Strike</p>
+                <p class="card-text mt-auto">Street Fighter</p>
               </div>
             </div>
           </div>
           <div class="col d-flex justify-content-center mt-2 mb-2 me-1 me-0 ps-1">
             <div class="card text-white"> 
-              <img src="./img/Deltarune.png" class="card-img card-img-small" alt="...">
+              <img src="./img/marketeers.jpg" class="card-img card-img-small" alt="...">
               <div class="card-img-overlay gradient">
-                <a href="#" class="stretched-link"></a>
+                <a href="game.html" class="stretched-link"></a>
               </div>
               <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
-                <p class="card-text mt-auto">Deltarune</p>
+                <p class="card-text mt-auto">Unconnected Marketeers</p>
               </div>
             </div>
           </div>
@@ -139,7 +141,7 @@
             <div class="card text-white">
               <img src="./img/battlefront 2.jpg" class="card-img card-img-small" alt="...">
               <div class="card-img-overlay gradient">
-                <a href="#" class="stretched-link"></a>
+                <a href="game.html" class="stretched-link"></a>
               </div>
               <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
                 <p class="card-text mt-auto">Battlefront 2</p>
@@ -148,34 +150,39 @@
           </div>
           <div class="col d-flex justify-content-center mt-2 mb-2 ms-1 me-0 pe-0 ps-0 pe-0">
             <div class="card text-white"> 
-              <img src="./img/street fighter.jpg" class="card-img card-img-small" alt="...">
+              <img src="./img/minecraft.jpg" class="card-img card-img-small" alt="...">
               <div class="card-img-overlay gradient">
-                <a href="#" class="stretched-link"></a>
+                <a href="game.html" class="stretched-link"></a>
               </div>
               <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
-                <p class="card-text mt-auto">Street Fighter</p>
+                <p class="card-text mt-auto">Minecraft</p>
               </div>
             </div>
           </div>
           <div class="col d-flex justify-content-center mt-2 mb-2 me-1 me-0 ps-1">
             <div class="card text-white"> 
-              <img src="./img/hollow knight.jpg" class="card-img card-img-small" alt="...">
+              <img src="./img/guilty gear.png" class="card-img card-img-small" alt="...">
               <div class="card-img-overlay gradient">
-                <a href="#" class="stretched-link"></a>
+                <a href="game.html" class="stretched-link"></a>
               </div>
               <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
-                <p class="card-text mt-auto">Hollow Knight</p>
+                <p class="card-text mt-auto">Guilty Gear</p>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </article>
     </content>
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script>
       document.getElementById('searchgames').addEventListener("click", function(){
-        document.getElementById("searchresults").classList.remove("d-none");
+        let loadingicon = document.getElementById("loadingiconsearch");
+        loadingicon.classList.remove("d-none");
+        setTimeout(function(){
+          loadingicon.classList.add("d-none");
+          document.getElementById("searchresults").classList.remove("d-none");
+        }, 1000)
       });
     </script>
   </body>
