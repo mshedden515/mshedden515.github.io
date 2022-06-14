@@ -8,6 +8,14 @@
 
 */
 
+.publi1 {
+  height: 150px;
+}
+
+card-title {
+  font-style: normal;
+  text-decoration-color:darkred; 
+}
 @media only screen and (max-width: 480px) {
   #searchitem{
     margin-top: 1rem;
