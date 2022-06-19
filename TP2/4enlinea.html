@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="./style.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre&family=Inria+Sans&display=swap" rel="stylesheet"> 
+    <title>Tpe Interfaces: 4 EN LINEA</title>
+    <link rel="stylesheet" href="connect4.css">
+    <script src="js/connect4.js"></script>
+  </head>
+  <body>
+     <!--Navbar start-->
+     <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container-fluid">
+        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          <img src="./img/logo.png" height="45" width="45">
+        </a>
+        <!--Navbar items-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item" id="searchitem">
+                <a class="nav-link active" href="search.html" tabindex="-1" aria-current="page">
+                  <img src="./img/lupa.png" class="d-lg-none">Buscar
+                </a>
+            </li>
+            <!--TODO: Ajustar tamaños de clases de titulos.-->
+            <li class="nav-item d-lg-none">
+              <h3>CATEGORIAS</h3>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link active" href="#" tabindex="-1" aria-current="page">
+                <img src="./img/sword.png" class="d-lg-none">Accion
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#" tabindex="-1" aria-current="page">
+                <img src="./img/gun.png" class="d-lg-none">Tiros
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#" tabindex="-1" aria-current="page">
+                <img src="./img/puzzle.png" class="d-lg-none">Puzzle
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#" tabindex="-1" aria-current="page">
+                <img src="./img/strategy.png" class="d-lg-none">Estrategia
+              </a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item d-lg-none">
+              <h3>PERFIL</h3>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="login.html" tabindex="-1" aria-current="page">
+                <img src="/img/avatar.png" class=""> Iniciar sesion
+              </a>
+            </li>
+          </ul>
+          <!--
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>-->
+        </div>
+      </div>
+    </nav>
+    <!--Navbar end-->
+    <content>
+      <div class="ms-1 mt-2">
+        <h2 style="color: #FFFFF0;">4 en linea</h2>
+        
+      </div>
+      <article class="m-1 game-preview d-flex justify-content-center align-items-center" id="gamewindow">
+        <div class="text-center position-relative" id="playprompt">
+          <img src="./img/BotonPlayYellow.png" alt="">
+          <figcaption style="color: #FFDD6B;">jugar</figcaption>
+          <a href="#" class="stretched-link" id="playgame"></a>
+        </div>
+        <img src="./img/loading.png" class="w-25 h-25 rotating d-none" id="loadingicongame">
+      </article>
+      <h2 id="winner"></h2>
+      <div id="board"></div>
+      
+      <h1 class="ingresar">Controles Aca</h1>
+      <div id="carouselExampleCaptions" class="carousel slide carousel-fade ms-1 me-1 mt-2" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./img/carr_1.jpg" class="d-block w-50" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/carr_2.png" class="d-block w-50" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/carr_3.jpg" class="d-block w-50" alt="...">
+          </div>
+        </div>
+      </div>
+
+    </content>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        document.getElementById('playgame').addEventListener("click", function(){
+          document.getElementById("playprompt").classList.add("d-none");
+          document.getElementById("loadingicongame").classList.remove("d-none");
+          setTimeout(function(){
+            document.getElementById("loadingicongame").classList.add("d-none");
+            let gamewindow = document.getElementById("gamewindow")
+            gamewindow.classList.remove("game-preview");
+            gamewindow.classList.add("game-play");
+          }, 2000)
+      })
+    </script> 
+  </body>
+</html>
