@@ -239,3 +239,28 @@ figure {
 .btn{
   font-family: 'Gemunu Libre', sans-serif;
 }
+
+.carousel-inner img {
+  margin: auto;
+}
+
+.carousel {
+  height: 400px;
+}
+
+.carousel-item,
+.carousel-inner,
+.carousel-inner img {
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  filter: invert(1);
+}
+
+.carousel-indicators button{
+  filter: invert(1);
+}
