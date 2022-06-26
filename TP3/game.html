@@ -12,9 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre&family=Inria+Sans&display=swap" rel="stylesheet"> 
-    <title>Tpe Interfaces: 4 EN LINEA</title>
-    <link rel="stylesheet" href="connect4.css">
-    <script src="js/connect4.js"></script>
+    <title>Tpe Interfaces</title>
   </head>
   <body>
      <!--Navbar start-->
@@ -40,22 +38,22 @@
             </li>
             
             <li class="nav-item">
-              <a class="nav-link active" href="#" tabindex="-1" aria-current="page">
+              <a class="nav-link active" href="search.html" tabindex="-1" aria-current="page">
                 <img src="./img/sword.png" class="d-lg-none">Accion
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#" tabindex="-1" aria-current="page">
+              <a class="nav-link active" href="search.html" tabindex="-1" aria-current="page">
                 <img src="./img/gun.png" class="d-lg-none">Tiros
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#" tabindex="-1" aria-current="page">
+              <a class="nav-link active" href="search.html" tabindex="-1" aria-current="page">
                 <img src="./img/puzzle.png" class="d-lg-none">Puzzle
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#" tabindex="-1" aria-current="page">
+              <a class="nav-link active" href="search.html" tabindex="-1" aria-current="page">
                 <img src="./img/strategy.png" class="d-lg-none">Estrategia
               </a>
             </li>
@@ -65,9 +63,10 @@
               <h3>PERFIL</h3>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="login.html" tabindex="-1" aria-current="page">
-                <img src="./img/avatar.png" class=""> Iniciar sesion
-              </a>
+              <div class="col d-flex justify-content-center">
+                <a class="nav-link active" href="login.html" tabindex="-1" aria-current="page"> Iniciar sesion </a>
+                <img src="./img/avatar.png">
+            </div>
             </li>
           </ul>
           <!--
@@ -82,12 +81,13 @@
     <content>
       <div class="ms-2 me-2 mt-1 d-flex justify-content-between align-items-center">
         <div class="d-flex align-items-center">
-          <h2 style="color: #FFFFF0;">4 en Linea</h2>
+          <h2 style="color: #FFFFF0;">Street Fighter</h2>
           <a class="ms-2" id="favoritegame">
             <img src="./img/nonfavorite.png" id="favoriteicon">
           </a>
         </div>
         <div>
+
         </div>
         <div class="d-flex align-items-center">
           <a ref="#" id="likegame">
@@ -107,22 +107,17 @@
           </div>
           <h5 class="m-2 mt-3" style="color: #FFFFF0;">&#161;El juego de lucha más grande del mundo ha evolucionado hasta un nuevo nivel con Street Fighter Alpha 2!</h5>
         </div>
-        <img src="./img/loading.png" class="h-25 rotating d-none" id="loadingicongame">
+        <img src="./img/loading.png" class="w-25 h-25 rotating d-none" id="loadingicongame">
       </article>
       <img src="./img/streetfightergif.gif" class="d-none" id="gameplaygif">
-      <!-- JUEGO CONNECT4  -->
-      <div id="playspace" class="d-none">
-        <h2 id="winner"></h2>
-        <div id="board"></div>
-      
-        <img id="fichaazul" class="blue-piece movil" src="img/fichaazul.png" draggable="true"></img>
-        <canvas id="gameboard" width="1200" height="600" style="border: 2px solid black"></canvas>
       
       <div class="ms-1 me-1 mt-2 tutorialbox text-center">
         <h3>&iquest;Como jugar?</h3>
-        <p style="color: #FFFFF0;" class="m-2">Arrastra con el mouse las piezas y sueltalas en la posicion deseada.</p>
+        <p style="color: #FFFFF0;" class="m-2">Usa el joystick virtual para mover tu personaje y hacer distintos puños y patadas.</p>
       </div>
 
+
+      <h3 class="ms-1 mt-2">Galeria</h3>
       <div id="carouselExampleCaptions" class="carousel slide carousel-fade ms-1 me-1 mt-2" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -131,30 +126,28 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="./img/carr_1.jpg" class="d-block w-50" alt="...">
+            <img src="./img/sfscreen1.jpg" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="./img/carr_2.png" class="d-block w-50" alt="...">
+            <img src="./img/sfscreen2.jpg" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="./img/carr_3.jpg" class="d-block w-50" alt="...">
+            <img src="./img/sfscreen3.jpg" class="d-block w-100" alt="...">
           </div>
         </div>
       </div>
-
     </content>
     <script src="js/script.js"></script>
-    <script src="js/connect4canvas.js"></script>
-    <script src="js/board.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script>
-        document.getElementById('playgame').addEventListener("click", function(){
+      document.getElementById('playgame').addEventListener("click", function(){
         document.getElementById("playprompt").classList.add("d-none");
         document.getElementById("loadingicongame").classList.remove("d-none");
         setTimeout(function(){
           document.getElementById("loadingicongame").classList.add("d-none");
-          document.getElementById("playspace").classList.remove("d-none");
-          document.getElementById("gamewindow").classList.add("d-none");
+          let gamewindow = document.getElementById("gamewindow")
+          gamewindow.classList.remove("game-preview");
+          gamewindow.classList.add("game-play");
         }, 2000)
       })
       document.getElementById("favoritegame").addEventListener("click", function(){
