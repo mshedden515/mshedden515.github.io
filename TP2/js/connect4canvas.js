@@ -19,15 +19,19 @@ ctx.fillStyle = "white";
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 
-function actualizar(){
+function actualizarAzules(){
   for (var i = 0; i < fichasAgarrablesAzules.length; i++) {
     fichasAgarrablesAzules[i].draw();
-  }
-  for (var i = 0; i < fichasAgarrablesRojas.length; i++) {
-    fichasAgarrablesRojas[i].draw();
-  }
+    console.log("test if azul added");
+  } 
 }
 
+function actualizarRojas(){
+  for (var i = 0; i < fichasAgarrablesRojas.length; i++) {
+    fichasAgarrablesRojas[i].draw();
+    console.log("test if rojo added");
+  }
+}
 
 let fichaAzul = new Image();
 fichaAzul.src = ('./img/fichaazul.png');
@@ -35,6 +39,7 @@ fichaAzul.onload = function(){
   for(var i = 0; i < 21; i++){
     let ficha = new Ficha(randomIntFromInterval(50, 300), randomIntFromInterval(100, 450), fichaAzul, playerBlue, ctx, 50);
     fichasAgarrablesAzules.push(ficha);
+    actualizarAzules();
   }
 }
 
@@ -44,10 +49,9 @@ fichaRoja.onload = function(){
   for(var i = 0; i < 21; i++){
     let ficha = new Ficha(randomIntFromInterval(850, 1100), randomIntFromInterval(100, 450), fichaRoja, playerRed, ctx, 50);
     fichasAgarrablesRojas.push(ficha);
+    actualizarRojas();
   }
 }
-
-actualizar();
 
 
 
@@ -58,32 +62,34 @@ boardImage.onload = function(){
 }
 
 canvas.onmousedown = function(event) {
-  for (var i = 0; i < fichasAgarrablesAzules.length; i++) {
-    if (fichasAgarrablesAzules[i].getPosX() < event.clientX
-      && (fichasAgarrablesAzules[i].getWidth() + fichasAgarrablesAzules[i].getPosX() > event.clientX)
-      && fichasAgarrablesAzules[i].getPosY() < event.clientY
-      && (fichasAgarrablesAzules[i].getWidth() + fichasAgarrablesAzules[i].getPosY() > event.clientY)
-      && currPlayer == fichasAgarrablesAzules[i].getJugador()
-    ) {
-      fichaActual = fichasAgarrablesAzules[i];
-      inicioY = event.clientY - fichasAgarrablesAzules[i].getPosX();
-      inicioX = event.clientX - fichasAgarrablesAzules[i].getPosY();
-
-      break;
+  if(currPlayer == "A"){
+    for (var i = 0; i < fichasAgarrablesAzules.length; i++) {
+      if (fichasAgarrablesAzules[i].getPosX() < event.clientX
+        && (fichasAgarrablesAzules[i].getWidth() + fichasAgarrablesAzules[i].getPosX() > event.clientX)
+        && fichasAgarrablesAzules[i].getPosY() < event.clientY
+        && (fichasAgarrablesAzules[i].getWidth() + fichasAgarrablesAzules[i].getPosY() > event.clientY)
+      ) {
+        fichaActual = fichasAgarrablesAzules[i];
+        inicioY = event.clientY - fichasAgarrablesAzules[i].getPosX();
+        inicioX = event.clientX - fichasAgarrablesAzules[i].getPosY();
+  
+        break;
+      }
     }
   }
-  for (var i = 0; i < fichasAgarrablesRojas.length; i++) {
-    if (fichasAgarrablesRojas[i].getPosX() < event.clientX
-      && (fichasAgarrablesRojas[i].getWidth() + fichasAgarrablesRojas[i].getPosX() > event.clientX)
-      && fichasAgarrablesRojas[i].getPosY() < event.clientY
-      && (fichasAgarrablesRojas[i].getWidth() + fichasAgarrablesRojas[i].getPosY() > event.clientY)
-      && currPlayer == fichasAgarrablesRojas[i].getJugador()
-    ) {
-      fichaActual = fichasAgarrablesRojas[i];
-      inicioY = event.clientY - fichasAgarrablesRojas[i].getPosX();
-      inicioX = event.clientX - fichasAgarrablesRojas[i].getPosY();
-
-      break;
+  if(currPlayer == "R"){
+    for (var i = 0; i < fichasAgarrablesRojas.length; i++) {
+      if (fichasAgarrablesRojas[i].getPosX() < event.clientX
+        && (fichasAgarrablesRojas[i].getWidth() + fichasAgarrablesRojas[i].getPosX() > event.clientX)
+        && fichasAgarrablesRojas[i].getPosY() < event.clientY
+        && (fichasAgarrablesRojas[i].getWidth() + fichasAgarrablesRojas[i].getPosY() > event.clientY)
+      ) {
+        fichaActual = fichasAgarrablesRojas[i];
+        inicioY = event.clientY - fichasAgarrablesRojas[i].getPosX();
+        inicioX = event.clientX - fichasAgarrablesRojas[i].getPosY();
+  
+        break;
+      }
     }
   }
 }
@@ -92,11 +98,17 @@ canvas.onmousemove = function(event) {
   if (fichaActual != null) {
     fichaActual.setPosX(event.clientX - inicioX);
     fichaActual.setPosY(event.clientY - inicioY);
+
+    if(fichaActual.getJugador == "A"){
+      actualizarAzules();
+    }
+    else if (fichaActual.getJugador == "R"){
+      actualizarRojas();
+    }
   }
-  actualizar();
 }
 
-canvas.onmouseup = function(evet) {
+canvas.onmouseup = function(event) {
   fichaActual = null;
 }
 
