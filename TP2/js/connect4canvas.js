@@ -19,18 +19,12 @@ ctx.fillStyle = "white";
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 
-function actualizarAzules(){
-  for (var i = 0; i < fichasAgarrablesAzules.length; i++) {
-    fichasAgarrablesAzules[i].draw();
-    console.log("test if azul added");
-  } 
-}
-
-function actualizarRojas(){
-  for (var i = 0; i < fichasAgarrablesRojas.length; i++) {
-    fichasAgarrablesRojas[i].draw();
-    console.log("test if rojo added");
-  }
+function actualizar(){
+  ctx.fillStyle = "white";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  drawBoard();
+  actualizarAzules();
+  actualizarRojas();
 }
 
 let fichaAzul = new Image();
@@ -39,7 +33,6 @@ fichaAzul.onload = function(){
   for(var i = 0; i < 21; i++){
     let ficha = new Ficha(randomIntFromInterval(50, 300), randomIntFromInterval(100, 450), fichaAzul, playerBlue, ctx, 50);
     fichasAgarrablesAzules.push(ficha);
-    actualizarAzules();
   }
 }
 
@@ -49,16 +42,28 @@ fichaRoja.onload = function(){
   for(var i = 0; i < 21; i++){
     let ficha = new Ficha(randomIntFromInterval(850, 1100), randomIntFromInterval(100, 450), fichaRoja, playerRed, ctx, 50);
     fichasAgarrablesRojas.push(ficha);
-    actualizarRojas();
+    actualizar();
   }
 }
 
+function actualizarAzules(){
+  for (var i = 0; i < fichasAgarrablesAzules.length; i++) {
+    fichasAgarrablesAzules[i].draw();
+  } 
+}
 
+function actualizarRojas(){
+  for (var i = 0; i < fichasAgarrablesRojas.length; i++) {
+    fichasAgarrablesRojas[i].draw();
+  }
+}
 
-let boardImage = new Image();
-boardImage.src = ('./img/board.png');
-boardImage.onload = function(){
-  ctx.drawImage(boardImage, 380, 110, 450, 390)
+function drawBoard(){
+  let boardImage = new Image();
+  boardImage.src = ('./img/board.png');
+  boardImage.onload = function(){
+    ctx.drawImage(boardImage, 380, 110, 450, 390)
+  }
 }
 
 canvas.onmousedown = function(event) {
@@ -99,12 +104,7 @@ canvas.onmousemove = function(event) {
     fichaActual.setPosX(event.clientX - inicioX);
     fichaActual.setPosY(event.clientY - inicioY);
 
-    if(fichaActual.getJugador == "A"){
-      actualizarAzules();
-    }
-    else if (fichaActual.getJugador == "R"){
-      actualizarRojas();
-    }
+    actualizar();
   }
 }
 
