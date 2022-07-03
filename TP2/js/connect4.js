@@ -1,4 +1,5 @@
-
+var fichasAgarrablesAzules = [];
+var fichasAgarrablesRojas = [];
 
 var playerRed = "R";
 var playerYellow = "Y";
@@ -12,8 +13,43 @@ var columns = 7;
 var currColumns = []; //keeps track of which row each column is at.
 
 window.onload = function() {
+    getFicha();
     setGame();
+    
 }
+
+//DETECTA CUANDO SE HACE CLIC SOBRE LA FICHA AZUL
+function getFicha() {
+    var e = document.getElementById('fichaazul');
+    var b = document.getElementById('board');
+ 
+    e.onmouseup = function(event) {
+        const x = event.clientX - e.offsetLeft;
+        const y = event.clientY - e.offsetTop;
+        console.log(x,y);
+    }
+    
+    e.ondragend = function(event) {
+        const x = event.clientX - e.offsetLeft;
+        const y = event.clientY - e.offsetTop;
+        console.log(x,y);
+        return false;
+    }
+    
+    /*
+    b.onmouseup = function(event) {
+        const x = event.clientX - e.offsetLeft;
+        const y = event.clientY - e.offsetTop;
+        console.log(x,y);
+    }*/
+    
+    b.ondragend = function(event) {
+        const x = event.clientX - e.offsetLeft;
+        const y = event.clientY - e.offsetTop;
+        console.log(x,y);
+    }
+}
+
 
 function setGame() {
     board = [];
@@ -28,7 +64,7 @@ function setGame() {
             let tile = document.createElement("div");
             tile.id = r.toString() + "-" + c.toString();
             tile.classList.add("tile");
-            tile.addEventListener("click", setPiece);
+            //tile.addEventListener("click", setPiece); ACA PONE LA PIEZA EN EL LUGAR
             document.getElementById("board").append(tile);
         }
         board.push(row);

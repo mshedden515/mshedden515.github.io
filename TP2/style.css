@@ -159,6 +159,15 @@ body{
   height: 400px; 
 }
 
+.cuantroenfila-preview{
+  background:url('./img/4_en_fila.jpg') rgba(148, 148, 148, 0.685); 
+  background-blend-mode:hue;
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+  height: 400px; 
+}
+
 .game-play {
   background-color: #022140;
   background-image: url('./img/streetfightergif.gif');
