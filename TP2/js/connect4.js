@@ -64,7 +64,7 @@ function setGame() {
             let tile = document.createElement("div");
             tile.id = r.toString() + "-" + c.toString();
             tile.classList.add("tile");
-            //tile.addEventListener("click", setPiece); ACA PONE LA PIEZA EN EL LUGAR
+            tile.addEventListener("click", setPiece); //ACA PONE LA PIEZA EN EL LUGAR
             document.getElementById("board").append(tile);
         }
         board.push(row);

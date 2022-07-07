@@ -14,7 +14,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre&family=Inria+Sans&display=swap" rel="stylesheet"> 
     <title>Tpe Interfaces: 4 EN LINEA</title>
     <link rel="stylesheet" href="connect4.css">
-    <script src="js/connect4.js"></script>
   </head>
   <body>
      <!--Navbar start-->
@@ -112,7 +111,10 @@
       <img src="./img/streetfightergif.gif" class="d-none" id="gameplaygif">
       <!-- JUEGO CONNECT4  -->
       <div id="playspace" class="d-none">
-        <h2 id="winner"></h2>
+        <h2 style="color: #FFFFF0;">Tiempo restante: <span id="time">05:00</span> minutos</h2>
+        <h2 id="winner" style="color: #FFFFF0;"></h2>
+        <canvas id="gameboard" width="1200" height="600" style="border: 2px solid black"></canvas>
+        <!--
         <div id="contenedor">
         <div>Jugador Azul
             <img id="fichaazul" class="ficha" src="img/fichaazul.png" draggable="true"></img>
@@ -121,14 +123,14 @@
         <div>Jugador Rojo
             <img id="ficharoja" class="ficha" src="img/ficharoja.png" draggable="true"></img>
         </div>
-        </div>
-        <canvas id="gameboard" width="1200" height="600" style="border: 2px solid black"></canvas>
+        </div>-->
+        
       </div>
       
       
       <div class="ms-1 me-1 mt-2 tutorialbox text-center">
         <h3>&iquest;Como jugar?</h3>
-        <p style="color: #FFFFF0;" class="m-2">Arrastra con el mouse las piezas y sueltalas en la posicion deseada.</p>
+        <p style="color: #FFFFF0;" class="m-2">Arrastra con el mouse las piezas sobre las flechas y sueltalas en la posicion deseada.</p>
       </div>
 
       <div id="carouselExampleCaptions" class="carousel slide carousel-fade ms-1 me-1 mt-2" data-bs-ride="carousel">

@@ -50,6 +50,11 @@ class Ficha{
   }
 
   draw (){
-    this.ctx.drawImage(this.image, this.posX, this.posY, this.width, this.width);
+    this.ctx.drawImage(this.image, this.posX, this.posY, 50, 50);
+  }
+
+  resetPos(){
+    this.posX = this.posOriginalX;
+    this.posY = this.posOriginalY;
   }
 }
