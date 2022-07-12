@@ -1,6 +1,8 @@
 //Se agarra el avatar del jugador
 var player = document.getElementById("character");
 
+var results = document.getElementById("results");
+
 /*Se obtiene el div conteniendo el juego y se agrega el listener al boton start*/
 let runner = document.getElementById('runner');
 let start = document.getElementById('startButton');
@@ -44,6 +46,7 @@ function setGame(){
   haya reiniciado el juego.*/
   player.classList.remove("idle");
   player.classList.remove("die");
+  player.classList.remove("win");
   player.classList.add("walk");
 
   //Se oculta el boton de start y de ver hurtbox
@@ -57,6 +60,9 @@ function setGame(){
   let keydown = false;
   let isJumping = false;
   var entities = [];
+
+  //en caso de que el jugador este jugando de nuevo se borran los resultados
+  results.innerText = "";
 
   //se inicializa la puntuacion en 0
   var score = 0;
@@ -73,6 +79,22 @@ function setGame(){
   //el loop principal
   let intervalId = setInterval(function(){
     
+    if (score >= 10){
+      results.innerText = "¡Ganaste! Puntuacion final: " + score;
+      clearInterval(intervalId);
+      player.classList.remove("jump");
+      player.classList.remove("walk");
+      player.classList.add("win");
+      document.getElementById("layer-1").classList.remove("active");
+      document.getElementById("layer-2").classList.remove("active");
+      document.getElementById("layer-3").classList.remove("active");
+      document.getElementById("layer-4").classList.remove("active");
+      document.getElementById("layer-5").classList.remove("active");
+      start.classList.remove("d-none");
+      hurtboxButton.classList.remove("d-none");
+      skinBuntton.classList.remove("d-none");
+    }
+
     /*Si el jugador presiona una tecla y puede saltar, salta.
     El jugador no puede saltar si ya esta saltando.*/
     if (keydown && !isJumping){
@@ -103,6 +125,7 @@ function setGame(){
           }
           if(collidingElement.classList.contains("enemy")){
             clearInterval(intervalId);
+            results.innerText = "¡Perdiste! Puntuacion final: " + score;
             player.classList.remove("jump");
             player.classList.remove("walk");
             player.classList.add("die");

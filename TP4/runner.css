@@ -99,7 +99,16 @@
     background-position-x: 0px;
   }
   100%{
-    background-position-x: -1090px;
+    background-position-x: -1080px;
+  }
+}
+
+@keyframes playerWin{
+  0%{
+    background-position-x: 0px;
+  }
+  100%{
+    background-position-x: -1080px;
   }
 }
 
@@ -348,11 +357,20 @@
 
 #character.die{
   background: url('img/characters/player/death.png');
-  animation: playerDie 2s steps(9) forwards;
+  animation: playerDie 1s steps(9) forwards;
 }
 
 #character.die.alt{
   background: url('img/characters/playeralt/death.png');
+}
+
+#character.win{
+  background: url('img/characters/player/win.png');
+  animation: playerWin 1s steps(9) forwards; 
+}
+
+#character.win.alt{
+  background: url('img/characters/playeralt/win.png');
 }
 
 .bat{
@@ -387,6 +405,14 @@
   position: absolute;
   background-repeat: repeat-x;
   background-size: contain;
+}
+
+#results{
+  position: absolute;
+  color: #FFFFF0;
+  left: 222px;
+  top: 300px;
+  z-index: 1000;
 }
 
 #layer-1{
@@ -430,5 +456,5 @@
 }
 
 .tutorialbox{
-  height: 200px;
+  height: 250px;
 }
