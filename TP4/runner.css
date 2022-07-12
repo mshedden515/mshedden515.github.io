@@ -56,7 +56,7 @@
   100%{
     bottom: 50px;
     background-position-x: -360px;
-    background: url('img/characters/player/_Fall.png');
+    background: url('img/characters/player/fall.png');
   }
 }
 
@@ -90,7 +90,7 @@
   100%{
     bottom: 50px;
     background-position-x: -360px;
-    background: url('img/characters/playeralt/_Fall.png');
+    background: url('img/characters/playeralt/fall.png');
   }
 }
 
@@ -319,40 +319,40 @@
 }
 
 #character.idle{
-  background: url('img/characters/player/_Idle.png');
+  background: url('img/characters/player/idle.png');
   animation: playerIdle 2s steps(10) infinite;
 }
 
 #character.idle.alt{
-  background: url('img/characters/playeralt/_Idle.png');
+  background: url('img/characters/playeralt/idle.png');
 }
 
 #character.walk{
-  background: url('img/characters/player/_Run.png');
+  background: url('img/characters/player/run.png');
   animation: playerWalk 1s steps(10) infinite;
 }
 
 #character.walk.alt{
-  background: url('img/characters/playeralt/_Run.png');
+  background: url('img/characters/playeralt/run.png');
 }
 
 #character.jump{
-  background: url('img/characters/player/_Jump.png');
+  background: url('img/characters/player/jump.png');
   animation: playerJump 1s steps(2) forwards;
 }
 
 #character.jump.alt{
-  background: url('img/characters/playeralt/_Jump.png');
+  background: url('img/characters/playeralt/jump.png');
   animation: playerJumpAlt 1s steps(2) forwards;
 }
 
 #character.die{
-  background: url('img/characters/player/_DeathNoMovement.png');
+  background: url('img/characters/player/death.png');
   animation: playerDie 2s steps(9) forwards;
 }
 
 #character.die.alt{
-  background: url('img/characters/playeralt/_DeathNoMovement.png');
+  background: url('img/characters/playeralt/death.png');
 }
 
 .bat{
