@@ -1,6 +1,14 @@
 class Entity{
-  constructor(name, isFlying){
-    this.name = name;
-    this.isFlying = isFlying;
+  constructor(type, element){
+    this.type = type;
+    this.element = element;
   }
+
+  getType(){
+    return this.type;
+  }
+
+  getElement(){
+    return this.element;
+  }  
 }

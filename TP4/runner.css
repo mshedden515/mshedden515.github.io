@@ -33,25 +33,25 @@
 
   }
   10%{
-    bottom: 75px;
+    bottom: 90px;
   }
   30%{
-    bottom: 100px;
+    bottom: 120px;
   }
   45%{
     bottom: 125px;
   }
   50%{
-    bottom: 150px;
+    bottom: 160px;
   }
   65%{
     bottom: 125px;
   }
   80%{
-    bottom: 100px;
+    bottom: 120px;
   }
   90%{
-    bottom: 75px;
+    bottom: 90px;
   }
   100%{
     bottom: 50px;
@@ -60,10 +60,199 @@
   }
 }
 
+@keyframes playerJumpAlt{
+  0%{
+    bottom: 50px;
+    background-position-x: 0px;
+
+  }
+  10%{
+    bottom: 90px;
+  }
+  30%{
+    bottom: 120px;
+  }
+  45%{
+    bottom: 125px;
+  }
+  50%{
+    bottom: 160px;
+  }
+  65%{
+    bottom: 125px;
+  }
+  80%{
+    bottom: 120px;
+  }
+  90%{
+    bottom: 90px;
+  }
+  100%{
+    bottom: 50px;
+    background-position-x: -360px;
+    background: url('img/characters/playeralt/_Fall.png');
+  }
+}
+
+@keyframes playerDie{
+  0%{
+    background-position-x: 0px;
+  }
+  100%{
+    background-position-x: -1090px;
+  }
+}
+
+@keyframes collisionJump{
+  0%{
+    bottom: 104px;
+  }
+  10%{
+    bottom: 144px;
+  }
+  30%{
+    bottom: 174px;
+  }
+  45%{
+    bottom: 179px;
+  }
+  50%{
+    bottom: 214px;
+  }
+  65%{
+    bottom: 179px;
+  }
+  80%{
+    bottom: 174px;
+  }
+  90%{
+    bottom: 144px;
+  }
+  100%{
+    bottom: 104px;
+  }
+}
+
+@keyframes coinFloat{
+  0%{
+    background-position-x: 0px;
+    left: 700px;;
+  }
+  16.6%{
+    left: 525px;
+  }
+  33.2%{
+    left: 350px;
+  }
+  49.8%{
+    left: 175px;
+    background-position-x: -180px;
+  }
+  66.4%{
+    left: 0px;
+  }
+  83%{
+    left: -175px;
+  }
+  100%{
+    left: -350px;
+    background-position-x: 0px;
+  }
+}
+
+@keyframes coinPicked{
+  0%{
+    left: 43px;
+    opacity: 1;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    left: 43px;
+    display: none;
+    opacity: 0;
+    bottom: 250px;
+  }
+}
+
+@keyframes batFly{
+  0%{
+    background-position-x: -29px;
+    left: 700px;
+  }
+  16.6%{
+    left: 525px;
+  }
+  33.2%{
+    left: 350px;
+  }
+  49.8%{
+    left: 175px;
+  }
+  66.4%{
+    left: 0px;
+  }
+  83%{
+    left: -175px;
+  }
+  100%{
+    left: -350px;
+    background-position-x: 463px;
+  }
+}
+
+@keyframes ghostWalk{
+  0%{
+    background-position-x: -20px;
+    left: 700px;
+  }
+  16.6%{
+    left: 525px;
+  }
+  33.2%{
+    left: 350px;
+  }
+  49.8%{
+    left: 175px;
+  }
+  66.4%{
+    left: 0px;
+  }
+  83%{
+    left: -175px;
+  }
+  100%{
+    left: -350px;
+    background-position-x: 429px;
+  }
+}
+#score{
+  position: absolute;
+  color: #FFFFF0;
+  left: 5px;
+  top: 5px;
+  z-index: 1000;
+}
+
 #startButton{
   position: absolute;
   left: 285px;
   top: 130px;
+  z-index: 1000;
+}
+
+#hurtboxButton{
+  position: absolute;
+  left: 500px;
+  top: 0px;
+  z-index: 1000;
+}
+
+#skinButton{
+  position: absolute;
+  left: 255px;
+  top: 160px;
   z-index: 1000;
 }
 
@@ -84,9 +273,58 @@
   bottom: 50px;
 }
 
+#chara-collision{
+  height: 40px;
+  width: 20px;
+  position: absolute;
+  left: 50px;
+  bottom: 104px;
+}
+
+#chara-collision.show{
+  border-style: solid;
+  border-color: red;
+}
+
+#chara-collision.jump{
+  animation: collisionJump 1s forwards;
+}
+
+.coin{
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  transform: scale(2);
+  image-rendering: pixelated;
+  bottom: 90px;
+}
+
+.flyingCoin{
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  transform: scale(2);
+  image-rendering: pixelated;
+  bottom: 180px;
+}
+
+.coin.float, .flyingCoin.float{
+  background: url('img/characters/pickup/coin3_20x20.png');
+  animation: coinFloat 3s steps(9) forwards;
+}
+
+.coin.picked, .flyingCoin.picked{
+  background: url('img/characters/pickup/coin3_20x20.png');
+  animation: coinPicked 0.5s steps(9) forwards;
+}
+
 #character.idle{
   background: url('img/characters/player/_Idle.png');
   animation: playerIdle 2s steps(10) infinite;
+}
+
+#character.idle.alt{
+  background: url('img/characters/playeralt/_Idle.png');
 }
 
 #character.walk{
@@ -94,9 +332,53 @@
   animation: playerWalk 1s steps(10) infinite;
 }
 
+#character.walk.alt{
+  background: url('img/characters/playeralt/_Run.png');
+}
+
 #character.jump{
   background: url('img/characters/player/_Jump.png');
   animation: playerJump 1s steps(2) forwards;
+}
+
+#character.jump.alt{
+  background: url('img/characters/playeralt/_Jump.png');
+  animation: playerJumpAlt 1s steps(2) forwards;
+}
+
+#character.die{
+  background: url('img/characters/player/_DeathNoMovement.png');
+  animation: playerDie 2s steps(9) forwards;
+}
+
+#character.die.alt{
+  background: url('img/characters/playeralt/_DeathNoMovement.png');
+}
+
+.bat{
+  height: 25px;
+  width: 20px;
+  position: absolute;
+  transform: scale(3);
+  image-rendering: pixelated;
+  background: url('img/characters/bat/Idle_Flying.png');
+  animation: batFly 3s steps(6) forwards;
+  left: 30px;
+  bottom: 180px;
+  background-position-y: -29px;
+}
+
+.ghost{
+  height: 45px;
+  width: 25px;
+  position: absolute;
+  transform: scale(2);
+  image-rendering: pixelated;
+  left: 30px;
+  bottom: 90px;
+  background: url('img/characters/ghost/ghost-idle.png');
+  background-position-y: -20px;
+  animation: ghostWalk 3s steps(7) forwards;
 }
 
 .layer {
@@ -145,4 +427,8 @@
 
 #layer-5.active{
   animation: scroll 3s infinite linear;
+}
+
+.tutorialbox{
+  height: 200px;
 }

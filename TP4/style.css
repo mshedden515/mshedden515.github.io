@@ -48,15 +48,7 @@ h3{
   font-family: 'Gemunu Libre', sans-serif;
 }
 
-h4{
-  font-family: 'Gemunu Libre', sans-serif;
-}
-
-h5{
-  font-family: 'Gemunu Libre', sans-serif;
-}
-
-p{
+h4, h5, p, ul, li{
   font-family: 'Gemunu Libre', sans-serif;
 }
 
